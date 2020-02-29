@@ -46,3 +46,8 @@ The test is created in
 ```
 test.py
 ```
+### Screenshots
+In order to understand the reason of the test is failing, it is saved a screenshot in the folder
+```
+screenshots
+```
