@@ -3,7 +3,7 @@
 The goal of this project is to automate the process of buy merchandising.
 ## Prerequisites
 ### Chromedriver
-Install Chromedriver you should open the command line and run the next command:
+Open the command line and run the next command:
 ```
 npm install chromedriver
 ```
@@ -13,8 +13,13 @@ Download Python from the link below:
 https://www.python.org/downloads/
 ```
 After that you should install it.
+### Unittest
+Open the command line and run the next command:
+```
+pip install unittest
+```
 ### Selenium
-Install Selenium you should open the command line and run the next command:
+Open the command line and run the next command:
 ```
 pip install -U selenium
 ```
@@ -25,6 +30,7 @@ To run the test, the steps are:
 ```
 python test.py
 ```
+*Note*: test is executed using Chromedriver
 ## Project Structure
 ### Drivers
 Manage the drivers used by the Project. The drivers are in
@@ -61,13 +67,32 @@ class User:
     FIRST_NAME = 'Luis'
     LAST_NAME = 'Coelho'
 ```
+### POM
+Each class represents a page while each method represents the elements within that class.
+Example:
+```python
+class DeliveryInformation:
+
+    def __init__(self, browser):
+        self.browser = browser
+
+    def fillEmail(self, email):
+        self.browser.find_element_by_css_selector(locators.AddressDelivery.EMAIL).clear()
+        self.browser.find_element_by_css_selector(locators.AddressDelivery.EMAIL).send_keys(email)
+
+```
 ### Test
-The test is created in
+The test is created in the file
 ```
 test.py
 ```
-### Screenshots
-In order to understand the reason of the test is failing, it is saved a screenshot in the folder
-```
-screenshots
+In order to create new test, check the example:
+```python
+def test_buy_merchandising(self):
+
+      productSelection = ProductSelection(self.browser)
+      productSelection.select_female()
+      productSelection.select_product()
+
+      ...
 ```
