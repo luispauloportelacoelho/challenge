@@ -96,3 +96,7 @@ def test_buy_merchandising(self):
 
       ...
 ```
+## Technical details
+* Python version: 3.7.2
+* Chrome version: 80.0.3987.122
+* ChromeDriver version: 80.0.3987.16
