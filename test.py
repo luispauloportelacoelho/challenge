@@ -3,9 +3,6 @@ import locators
 import drivers
 from selenium import webdriver
 from user import User
-from selenium.webdriver.common.by import By
-from selenium.webdriver.support.ui import WebDriverWait
-from selenium.webdriver.support import expected_conditions as EC
 
 SITE_URL = 'https://shop.mercedes-benz.com/en-gb/collection/'
 TIME_OUT_SECONDS = 10
