@@ -2,6 +2,7 @@
 ## Project Description
 The goal of this project is to automate the process of buy merchandising.
 ## Prerequisites
+### Chromedriver
 Install Chromedriver you should open the command line and run the next command:
 ```
 npm install chromedriver
