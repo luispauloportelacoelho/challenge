@@ -23,11 +23,16 @@ class Basket:
     def __init__(self, browser):
         self.browser = browser
 
+    def price(self):
+        price = self.browser.find_element_by_css_selector(locators.ShoppingBasket.PRICE).text
+        return price
+
     def addToBasket(self):
         self.browser.find_element_by_css_selector(locators.ShoppingBasket.ADD_BASKET_BUTTON).click()
 
     def confirmItem(self):
         self.browser.find_element_by_css_selector(locators.ShoppingBasket.GO_SHOPPING_BASKET_BUTTON).click()
+        self.browser.find_element_by_css_selector(locators.ShoppingBasket.CONTINUE_DELIVERY_BUTTON)
         self.browser.find_element_by_css_selector(locators.ShoppingBasket.CONTINUE_DELIVERY_BUTTON).click()
 
 
@@ -82,3 +87,12 @@ class Payment:
 
     def confirmation(self):
         self.browser.find_element_by_css_selector(locators.PaymentPage.CONFIRMATION_BUTTON).click()
+
+
+class Verification:
+    def __init__(self, browser):
+        self.browser = browser
+
+    def price(self):
+        verification_price = self.browser.find_element_by_css_selector(locators.VerificationPage.PRICE).text
+        return verification_price

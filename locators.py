@@ -1,5 +1,21 @@
 from selenium.webdriver.common.by import By
 
+class Cookie:
+    AGREE_BUTTON = 'btn-agree'
+
+
+class FashionBeauty:
+    FASHION_SELECTION = 'utils-content-carousel-container-tile-image'
+    PRODUCT_SELECTION = 'utils-product-tile-price'
+
+
+class ShoppingBasket:
+    PRICE = '[data-testid="pdp-buy-box-add-to-basket-price"]'
+    ADD_BASKET_BUTTON = '[data-testid="pdp-buy-box-add-to-basket-add"]'
+    GO_SHOPPING_BASKET_BUTTON = '[data-testid="pdp-buy-box-add-to-basket-got-to-cart"]'
+    CONTINUE_DELIVERY_BUTTON = '[data-testid="co-func-header-forward"]'
+
+
 class AddressDelivery:
     EMAIL = '[data-testid="co-order-process-login-guest-user-email"]'
     SALUTATION_MR_RADIO_BUTTON = \
@@ -21,16 +37,5 @@ class PaymentPage:
     CONFIRMATION_BUTTON = '[data-testid="co-func-footer-forward"]'
 
 
-class ShoppingBasket:
-    ADD_BASKET_BUTTON = '[data-testid="pdp-buy-box-add-to-basket-add"]'
-    GO_SHOPPING_BASKET_BUTTON = '[data-testid="pdp-buy-box-add-to-basket-got-to-cart"]'
-    CONTINUE_DELIVERY_BUTTON = '[data-testid="co-func-header-forward"]'
-
-
-class FashionBeauty:
-    FASHION_SELECTION = 'utils-content-carousel-container-tile-image'
-    PRODUCT_SELECTION = 'utils-product-tile-price'
-
-
-class Cookie:
-    AGREE_BUTTON = 'btn-agree'
+class VerificationPage:
+    PRICE = '[data-testid="co-orderline-total-price"]'

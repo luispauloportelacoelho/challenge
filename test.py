@@ -8,6 +8,7 @@ from POM import ProductSelection
 from POM import Basket
 from POM import DeliveryInformation
 from POM import Payment
+from POM import Verification
 
 class Test(unittest.TestCase):
 
@@ -29,6 +30,7 @@ class Test(unittest.TestCase):
 
         basket = Basket(self.browser)
         basket.addToBasket()
+        basket_price = basket.price()
         basket.confirmItem()
 
         deliveryInformation = DeliveryInformation(self.browser)
@@ -42,11 +44,15 @@ class Test(unittest.TestCase):
         time.sleep(5)
         deliveryInformation.continueDelivery()
 
-        payment = Payment(self.browser);
+        payment = Payment(self.browser)
         payment.page()
         payment.paymentVisa()
         payment.confirmation()
 
+        verification = Verification(self.browser)
+        verification_price = verification.price()
+
+        self.assertEqual(verification_price, basket_price)
 
     def tearDown(self):
         self.browser.close()
