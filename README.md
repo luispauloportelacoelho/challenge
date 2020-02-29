@@ -37,7 +37,7 @@ Manage the locators used by the Project. The locators are divided according the 
 locators.py
 ```
 ### User data
-Manage the user data. The user data are in
+Manage the user data. The user data is in
 ```
 user.py
 ```
